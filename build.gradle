@@ -21,7 +21,6 @@ dependencies {
 
     testCompile 'org.testng:testng:6.8.7'
     testCompile 'org.mockito:mockito-all:1.9.5'
-    // testCompile group: 'com.google.inject', name: 'guice', version: '3.0'
 }
 
 
