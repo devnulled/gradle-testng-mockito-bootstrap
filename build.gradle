@@ -5,6 +5,11 @@ apply plugin: 'groovy'
 // Use this to build a uberJar
 //apply plugin:'application'
 
+description = """A simple project to bootstrap a simple Groovy app with Gradle, TestNG, and a few other default deps"""
+
+sourceCompatibility = 1.6
+targetCompatibility = 1.6
+
 repositories {
     mavenCentral()
 }
@@ -16,11 +21,24 @@ dependencies {
 
     testCompile 'org.testng:testng:6.8.7'
     testCompile 'org.mockito:mockito-all:1.9.5'
+    // testCompile group: 'com.google.inject', name: 'guice', version: '3.0'
 }
 
 
-
-
 task wrapper(type: Wrapper) {
-        gradleVersion = '1.8'
+    gradleVersion = '1.8'
+}
+
+test {
+    useTestNG() 
+    testLogging {
+        events 'passed', 'failed'
+    }
+}
+
+idea {
+    module {
+        downloadJavadoc = true
+        downloadSources = true
+    }
 }
