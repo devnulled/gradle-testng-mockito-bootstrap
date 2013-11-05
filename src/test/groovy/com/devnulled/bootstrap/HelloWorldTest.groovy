@@ -1,4 +1,4 @@
-package com.devnulled.template
+package com.devnulled.bootstrap
 
 import org.testng.annotations.*
 
