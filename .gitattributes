@@ -1,0 +1,4 @@
+gradle/wrapper/* linguist-vendored
+gradlew linguist-vendored
+gradlew.bat linguist-vendored
+*.gradle linguist-language=Groovy 
